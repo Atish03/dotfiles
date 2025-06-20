@@ -42,6 +42,15 @@
 	min-width: 250px;
 }
 
+.output-device {
+  font-family: "JetBrainsMono Nerd Font";
+  background-color: #45475a;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+  font-weight: 900;
+  color: #cdd6f4;
+}
+
 .weather_card {
   border-radius: 20px;
   background-color: #313244;

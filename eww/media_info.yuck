@@ -1,5 +1,4 @@
-(defpoll METADATA :interval "1s"
-    "$HOME/.config/eww/scripts/media_metadata.sh")
+(defpoll METADATA :interval "1s" "$HOME/.config/eww/scripts/media_metadata.sh")
 
 (defwidget media[]
     (box :orientation "h"
@@ -18,6 +17,14 @@
              :halign "center"
              :space-evenly false
              :spacing 15
+            (box :class "output-device-box"
+                 :space-evenly true
+                 (label :class "output-device"
+                        :text "${METADATA.output.icon}  ${METADATA.output.name}"
+                        :limit-width 20
+                        :halign "end"
+                 )
+            )
             (label :text "${METADATA.title}"
                    :class "title"
                    :valign "center"
