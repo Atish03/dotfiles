@@ -1,0 +1,31 @@
+(defpoll current-year :interval "60m"
+  :initial "initial-year"
+  `date +%y`
+)
+
+(defpoll current-month :interval "60m"
+  :initial "initial-month"
+  `date +%b`
+)
+
+
+(defwidget calendar_widget[]
+  (box :class "cal-widget"
+       :space-evenly false
+    (box :class "cal-box"
+         :space-evenly false
+         (calendar :class "cal"
+                   :month current-month
+                   :year current-year
+         )
+    )
+    (box :class "divider-box"
+         :width 1
+         (box :class "divider")
+    )
+    (box :class "events"
+         :width 320
+         "No upcoming events"
+    )
+  )
+)

@@ -1,0 +1,45 @@
+(defpoll location       :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .location")
+(defpoll upcoming       :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .upcoming")
+(defpoll country        :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .country")
+(defpoll winners        :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .winners")
+(defpoll meeting_start  :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .meeting_start")
+
+(defwidget formula1[]
+    (box :class "formula-main"
+         :orientation "v"
+         :width 350
+         :space-evenly false
+         (box :orientation "h"
+              :class "formula1-loc"
+              :space-evenly false
+              (box :halign "start"
+                   (box :class "f1-logo" :height 15 :width 60)
+              )
+              (label :justify "right"
+                     :xalign 1
+                     :width 250
+                     :text "${location}, ${country}"
+              )
+         )
+         (box :visible {upcoming}
+              :orientation "v"
+              :space-evenly false
+              (box :class "car-gif"
+                   :height 100
+              )
+              (box "Event starts at ${meeting_start} UTC")
+          )
+         (box :orientation "v"
+              :visible {!upcoming}
+              (for driver in winners
+                    (box :class "driver"
+                         :space-evenly false
+                         :style "background-color: ${driver.color}; color: ${driver.text_color}"
+                         (box :width 50 "${driver.driver}")
+                         (box :width 150 "${driver.team}")
+                         (box :width 100 "${driver.race_time}")
+                    )
+               )
+          )
+    )
+)

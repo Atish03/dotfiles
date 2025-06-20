@@ -1,0 +1,183 @@
+* {all: unset}
+
+.media {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #313244;
+}
+
+.cover, .weather_icon {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.weather_icon {
+  background-size: contain;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #cdd6f4;
+}
+
+.artist {
+  font-weight: 600;
+  color: #bac2de;
+}
+
+.progressbar scale trough highlight {
+	background-color: #b4befe;
+	border-radius: 2.5px;
+}
+
+.progressbar scale trough {
+	background-color: #6c7086;
+	border-radius: 2.5px;
+	min-height: 5px;
+	min-width: 250px;
+}
+
+.weather_card {
+  border-radius: 20px;
+  background-color: #313244;
+}
+
+.condition, .weather_info {
+  padding: 0px 25px;
+}
+
+.location, .cond {
+  font-weight: 500;
+}
+
+.cond {
+  color: #bac2de;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.location {
+  color: #bac2de;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.temp {
+  font-size: 70px;
+  font-weight: 800;
+  color: #9399b2;
+}
+
+.min_max_temp {
+  font-weight: 600;
+  padding-right: 25px;
+  color: #7f849c;
+}
+
+.icon {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 17px;
+  font-weight: 800;
+  color: #9399b2;
+}
+
+.misc_stat {
+  font-size: 14px;
+  margin-left: 3px;
+  font-family: sans-serif;
+}
+
+.formula-main {
+  border-radius: 20px;
+  padding: 20px 20px 10px 20px;
+  font-family: "Formula1 Display Regular", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  background-color: #313244;
+  color: #cdd6f4;
+}
+
+.formula1-loc {
+  margin-bottom: 10px;
+}
+
+.driver {
+  margin-bottom: 5px;
+  padding: 7px 5px;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.f1-logo {
+  background-image: url("file:///home/b3gul4/.config/eww/images/f1.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.car-gif {
+  background-image: url("file:///home/b3gul4/.config/eww/images/f1_car.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.cal-widget {
+  background-color: #313244;
+  border-radius: 20px;
+}
+
+.cal-box {
+  padding: 5px 10px;
+}
+
+.cal {
+  font-size: 1em;
+  font-weight: 800;
+  color: #a6adc8;
+  padding: 1px;
+}
+
+.cal:selected {
+  background-color: #cdd6f4;
+  color: #313244;
+  border-radius: 5px;
+}
+
+.cal.header {
+  color: #9399b2;
+  font-weight: bold;
+}
+
+.cal.button {
+  color: #7f849c;
+}
+
+.cal.highlight {
+  color: #cdd6f4;
+  font-weight: bold;
+}
+
+.cal:indeterminate {
+  color: #45475a;
+}
+
+.events {
+  font-weight: 800;
+  color: #cdd6f4;
+}
+
+.divider {
+  background-color: #585b70;
+}
+
+.divider-box {
+  padding: 15px 0px;
+}

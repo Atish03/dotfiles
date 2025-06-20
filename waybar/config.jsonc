@@ -1,0 +1,81 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "spacing": 7,
+  "margin-top": 5,
+
+  "modules-left":[ "hyprland/workspaces" ],
+  "modules-center":[ "clock", "pulseaudio", "battery", "network" ],
+  "modules-right":[ "custom/notify", "custom/power" ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": ""
+    },
+    "persistent-workspaces": {
+      "*": 10, 
+      "HDMI-A-1": 3 
+    }
+  },
+
+  "clock": {
+    "format": "{:%d %b %a %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+
+  "battery": {
+      "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-charging": "{capacity}% ",
+      "format-plugged": "{capacity}% ",
+      "format-alt": "{time} {icon}",
+      "format-icons": [" ", " ", " ", " ", " "]
+  },
+
+  "network": {
+      "interval": 1, 
+      "format-wifi": "{essid}"  ,
+      "format-ethernet": "Connected  ",
+      "tooltip-format": "{ifname} via {gwaddr}",
+      "format-linked": "{ifname} (No IP)",
+      "format-disconnected": "Disconnected ⚠",
+      "on-click": "~/.config/rofi/wifimenu/wifimenu.sh"
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": "{icon} {format_source}",
+    "format-muted": "{format_source}",
+    "format-source": " ",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "custom/power":{
+    "format": "",
+    "on-click": "$HOME/.config/rofi/powermenu/type-3/powermenu.sh"
+  },
+
+  "custom/notify": {
+    "format": "",
+    "on-click": "swaync-client -t"
+  }
+}
+

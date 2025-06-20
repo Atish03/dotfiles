@@ -1,0 +1,64 @@
+(defpoll WEATHER_DATA :interval "900" "cat $HOME/.cache/mywidgets/weather.json | jq -r")
+
+(defwidget weather[]
+    (box :class "weather_card"
+         :space-evenly false
+         :width 350
+         :orientation "v"
+         :spacing 7
+        (box :class "condition"
+             :height 90
+             :space-evenly false
+             :spacing 10
+            (box :class "weather_icon"
+                 :height 85
+                 :width 85
+                 :style "background-image: url('${WEATHER_DATA.icon_url}')"
+            )
+            (box :class "loc_cond"
+                 :orientation "v"
+                 :space-evenly false
+                 :valign "center"
+                 :halign "end"
+                 :hexpand true
+                (box :class "location"
+                     :halign "end"
+                     "${WEATHER_DATA.location}"
+                )
+                (box :class "cond"
+                     :halign "end"
+                     "${WEATHER_DATA.main}"
+                )
+            )
+        )
+        (box :class "weather_info"
+             :space-evenly false
+            (box :orientation "v"
+                 :space-evenly false
+                 :valign "center"
+                 :halign "center"
+                (box :class "temp"
+                     :halign "center"
+                     :valign "center"
+                    "${WEATHER_DATA.temp}°"
+                )
+                (box :class "min_max_temp"
+                     :spacing 10
+                     :halign "center"
+                    (box :halign "center" "${WEATHER_DATA.min_temp}°")
+                    (box :halign "center" "${WEATHER_DATA.max_temp}°")
+                )
+            )
+            (box :orientation "v"
+                 :halign "end"
+                 :hexpand true
+                 :space-evenly false
+                 :spacing 4
+              (box :class "icon" :space-evenly false :spacing 10 (label :class "icon-img" :xalign 0.6 :width 50 :text "") (box :class "misc_stat" "${WEATHER_DATA.wind} Km/h"))
+              (box :class "icon" :space-evenly false :spacing 10 (label :class "icon-img" :xalign 0.6 :width 50 :text "") (box :class "misc_stat" "${WEATHER_DATA.humidity}%"))
+              (box :class "icon" :space-evenly false :spacing 10 (label :class "icon-img" :width 50 :text "") (box :class "misc_stat" "${WEATHER_DATA.sunrise}"))
+              (box :class "icon" :space-evenly false :spacing 10 (label :class "icon-img" :width 50 :text "") (box :class "misc_stat" "${WEATHER_DATA.sunset}"))
+            )
+        )
+    )
+)

@@ -1,0 +1,19 @@
+{
+  "modules": [
+    "title",
+    "separator",
+    {
+      "type": "os",
+      "key": "OS",
+      "format": "{name} {version}"
+    },
+    "kernel",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "cpuusage",
+    "separator",
+    "colors"
+  ]
+}

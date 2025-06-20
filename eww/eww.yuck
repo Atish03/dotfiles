@@ -1,0 +1,33 @@
+(include "./media_info.yuck")
+(include "./weather.yuck")
+(include "./f1.yuck")
+(include "./calendar_widget.yuck")
+
+(defwidget container_1[]
+    (box :orientation "v"
+         :spacing 10
+         :space-evenly false
+      (box :orientation "h"
+           :spacing 10
+           :space-evenly false
+          (media)
+          (weather)
+      )
+      (box :orientation "h"
+           :space-evenly false
+           :spacing 10
+           :halign "start"
+           (formula1)
+           (calendar_widget)
+      )
+    )
+)
+
+(defwindow mywidgets
+    :monitor 0
+    :geometry (geometry :x "5%"
+                        :y "10%"
+                        :anchor "top left")
+    :stacking "bottom"
+    :focusable: none
+(container_1))

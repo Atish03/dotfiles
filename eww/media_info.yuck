@@ -1,0 +1,44 @@
+(defpoll METADATA :interval "1s"
+    "$HOME/.config/eww/scripts/media_metadata.sh")
+
+(defwidget media[]
+    (box :orientation "h"
+         :class "media"
+         :space-evenly false
+         :spacing 20
+        (box :style "background-image: url('${METADATA.cover_url}')"
+             :class "cover"
+             :height 180
+             :width 180
+        )
+        (box :orientation "vertical"
+             :class "metadata"
+             :width 350
+             :valign "center"
+             :halign "center"
+             :space-evenly false
+             :spacing 15
+            (label :text "${METADATA.title}"
+                   :class "title"
+                   :valign "center"
+                   :halign "center"
+            )
+            (label :text "${METADATA.artist}"
+                   :class "artist"
+                   :show-truncated true
+                   :limit-width 100
+                   :valign "center"
+                   :halign "center"
+            )
+            (box :class "progressbar"
+                 :halign "center"
+                (scale :value "${METADATA.progress}"
+                       :min 0
+                       :max 101
+                       :round-digits 1
+                       :active "true"
+                )
+            )
+        )
+    )
+)
