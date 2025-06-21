@@ -181,6 +181,20 @@
 .events {
   font-weight: 800;
   color: #cdd6f4;
+  padding: 10px 0px;
+}
+
+.event {
+  padding: 0px 20px;
+}
+
+.event-date {
+  background-color: #45475a;
+  border-radius: 10px;
+}
+
+.event-name {
+  color: #9399b2;
 }
 
 .divider {

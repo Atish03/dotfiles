@@ -23,6 +23,7 @@ window#waybar.hidden {
 #workspaces button {
     background: #1e1e2e;
     color: #cdd6f4;
+    border-radius: 7px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -69,6 +70,7 @@ window#waybar.hidden {
 #mpd {
     padding: 0 10px;
     color: #cdd6f4;
+    border-radius: 7px;
 }
 
 #window,

@@ -1,13 +1,6 @@
-(defpoll current-year :interval "60m"
-  :initial "initial-year"
-  `date +%y`
-)
-
-(defpoll current-month :interval "60m"
-  :initial "initial-month"
-  `date +%b`
-)
-
+(defpoll current-year :interval "60m" :initial "initial-year" `date +%y`)
+(defpoll current-month :interval "60m" :initial "initial-month" `date +%b`)
+(defpoll EVENTS :interval "5m" "cat $HOME/.cache/mywidgets/calendar.json")
 
 (defwidget calendar_widget[]
   (box :class "cal-widget"
@@ -25,7 +18,17 @@
     )
     (box :class "events"
          :width 320
-         "No upcoming events"
+         :orientation "v"
+         :spacing 10
+         (for event in EVENTS
+            (box :space-evenly false
+                 :spacing 10
+                 :halign "start"
+                 :class "event"
+                 (label :class "event-date" :width 50 :text "${event.start}")
+                 (label :class "event-name" :limit-width 25 :text "${event.summary}")
+            )
+         ) 
     )
   )
 )
