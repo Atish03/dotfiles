@@ -24,6 +24,7 @@ window#waybar.hidden {
     background: #1e1e2e;
     color: #cdd6f4;
     border-radius: 7px;
+    padding-right: 12px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
