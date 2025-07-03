@@ -88,5 +88,9 @@ return {
     opts = {
         processor = "magick_cli",
     }
+  },
+
+  {
+    "github/copilot.vim"
   }
 }

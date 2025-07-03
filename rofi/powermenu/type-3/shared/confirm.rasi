@@ -21,8 +21,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
-    border-radius:               20px;
+    width:                       300px;
+    border-radius:               10px;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -43,6 +43,7 @@ message {
     background-color:            @background-alt;
     text-color:                  @foreground;
 }
+
 textbox {
     background-color:            inherit;
     text-color:                  inherit;
@@ -73,14 +74,15 @@ listview {
 
 /*****----- Elements -----*****/
 element {
-    padding:                     60px 10px;
-    border-radius:               20px;
+    padding:                     30px 10px 30px 0px;
+    border-radius:               10px;
     background-color:            @background-alt;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
+
 element-text {
-    font:                        "feather 48";
+    font:                        "JetBrainsMono Nerd Font 25";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

@@ -35,6 +35,9 @@
 /user-dirs.dirs 
 /user-dirs.locale
 /QtProject
+/github-copilot
+/OpenRGB
+/rnayabed
 
 /eww/scripts/.env
 /eww/scripts/secrets
