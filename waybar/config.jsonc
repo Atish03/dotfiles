@@ -65,7 +65,7 @@
       "car": " ",
       "default": [" ", " ", " "]
     },
-    "on-click": "pavucontrol"
+    "on-click": "~/.config/waybar/sink-select.sh"
   },
 
   "custom/power":{
