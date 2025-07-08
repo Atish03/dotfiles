@@ -6,7 +6,7 @@
   "margin-top": 5,
 
   "modules-left":[ "hyprland/workspaces" ],
-  "modules-center":[ "clock", "pulseaudio", "battery", "network" ],
+  "modules-center":[ "clock", "pulseaudio", "battery", "network", "custom/cava" ],
   "modules-right":[ "custom/notify", "custom/power" ],
 
   "hyprland/workspaces": {
@@ -22,8 +22,8 @@
 
   "clock": {
     "format": "{:%d %b %a %H:%M}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "{:%Y-%m-%d}",
+    "tooltip": false
   },
 
   "battery": {
@@ -76,6 +76,12 @@
   "custom/notify": {
     "format": "",
     "on-click": "swaync-client -t"
+  },
+
+  "custom/cava": {
+    "format": "{text}",
+    "exec": "~/.config/waybar/cava_module.py",
+    "return-type": "json"
   }
 }
 
