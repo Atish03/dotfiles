@@ -1,6 +1,6 @@
 (defpoll current-year :interval "60m" :initial "initial-year" `date +%y`)
 (defpoll current-month :interval "60m" :initial "initial-month" `date +%b`)
-(defpoll EVENTS :interval "5m" "cat $HOME/.cache/mywidgets/calendar.json")
+(defpoll EVENTS :interval "1m" "cat $HOME/.cache/mywidgets/calendar.json")
 
 (defwidget calendar_widget[]
   (box :class "cal-widget"
