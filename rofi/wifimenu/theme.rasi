@@ -82,7 +82,7 @@ element {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               5px;
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -96,6 +96,6 @@ element-text {
     horizontal-align:            0.0;
 }
 element selected.normal {
-    background-color:            var(selected);
-    text-color:                  var(background-alt);
+    background-color:            @selected;
+    text-color:                  @foreground;
 }
