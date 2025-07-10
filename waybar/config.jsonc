@@ -41,7 +41,7 @@
 
   "network": {
       "interval": 1, 
-      "format-wifi": "{essid}"  ,
+      "format-wifi": "{essid} 󰖩 "  ,
       "format-ethernet": "Connected  ",
       "tooltip-format": "{ifname} via {gwaddr}",
       "format-linked": "{ifname} (No IP)",
@@ -69,7 +69,7 @@
   },
 
   "custom/power":{
-    "format": "",
+    "format": "⏻",
     "on-click": "$HOME/.config/rofi/powermenu/type-3/powermenu.sh"
   },
 
