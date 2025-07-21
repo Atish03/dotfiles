@@ -22,7 +22,7 @@
   font-family: "Oswald", sans-serif;
   font-size: 2.5em;
   font-weight: 600;
-  color: #cdd6f4;
+  color: #b4befe;
 }
 
 .artist {
@@ -31,7 +31,7 @@
 }
 
 .progressbar scale trough highlight {
-	background-color: #b4befe;
+	background-color: #f9e2af;
 	border-radius: 2.5px;
 }
 
@@ -48,7 +48,7 @@
   padding: 5px 15px 5px 15px;
   border-radius: 10px;
   font-weight: 900;
-  color: #cdd6f4;
+  color: #eba0ac;
 }
 
 .weather_card {
@@ -65,7 +65,7 @@
 }
 
 .cond {
-  color: #bac2de;
+  color: #f9e2af;
   font-size: 20px;
   font-weight: 800;
 }
@@ -79,7 +79,7 @@
 .temp {
   font-size: 70px;
   font-weight: 800;
-  color: #9399b2;
+  color: #f5c2e7;
 }
 
 .min_max_temp {
@@ -155,7 +155,7 @@
 }
 
 .cal:selected {
-  background-color: #cdd6f4;
+  background-color: #f2cdcd;
   color: #313244;
   border-radius: 5px;
 }
@@ -191,6 +191,7 @@
 .event-date {
   background-color: #45475a;
   border-radius: 10px;
+  color: #cba6f7;
 }
 
 .event-name {

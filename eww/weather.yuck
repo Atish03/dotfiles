@@ -1,4 +1,4 @@
-(defpoll WEATHER_DATA :interval "900" "cat $HOME/.cache/mywidgets/weather.json | jq -r")
+(defpoll WEATHER_DATA :interval "1m" "cat $HOME/.cache/mywidgets/weather.json | jq -r")
 
 (defwidget weather[]
     (box :class "weather_card"
