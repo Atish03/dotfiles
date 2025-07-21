@@ -86,7 +86,7 @@ def main():
     ]
 
     combined.sort(key=lambda x: x['sort_key'])
-    next_five = list(map(lambda x: {"start": x["start"], "summary": x["summary"]}, combined[:6]))
+    next_five = list(map(lambda x: {"start": x["start"], "summary": x["summary"]}, combined[:5]))
 
     if not os.path.exists(CACHE_DIR):
         os.makedirs(CACHE_DIR)
