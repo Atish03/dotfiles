@@ -5,7 +5,7 @@ import subprocess
 import tempfile
 import json
 
-BARS_NUMBER = 20
+BARS_NUMBER = 40
 # OUTPUT_BIT_FORMAT = "8bit"
 OUTPUT_BIT_FORMAT = "16bit"
 # RAW_TARGET = "/tmp/cava.fifo"
@@ -58,7 +58,6 @@ def run():
             
             output = {
                 "text": sample,
-                "class": "custom-cava"
             }
 
             print(json.dumps(output), flush=True)

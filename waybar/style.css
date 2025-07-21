@@ -18,12 +18,10 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-
 #workspaces button {
     background: #1e1e2e;
     color: #cdd6f4;
     border-radius: 7px;
-    padding-right: 12px;
 }
 
 #workspaces button:hover {
@@ -33,6 +31,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
     background: #313244;
+    color: #a6e3a1;
 }
 
 #workspaces button.urgent {
@@ -46,7 +45,7 @@ window#waybar.hidden {
 #custom-power,
 #custom-notify,
 #custom-cava {
-    padding: 0 10px;
+    padding: 0px 10px;
     color: #cdd6f4;
     border-radius: 7px;
     background-color: #313244;
@@ -101,14 +100,14 @@ label:focus {
 #custom-notify {
     color: #b4befe;
     font-size: 17px;
-    padding: 0px 13px 0px 10px;
+    padding-right: 13px;
 }
 
 #custom-power{
     color: #f2cdcd;
     font-size: 17px;
     margin-right: 10px;
-    padding: 0px 15px 0px 10px;
+    padding-right: 13px;
 }
 
 #clock {
@@ -125,10 +124,13 @@ label:focus {
 
 #network {
   color: #89b4fa;
+  padding-right: 13px;
 }
 
 #custom-cava {
   color: #fab387;
+  padding-right: 5px;
+  letter-spacing: -5px;
 }
 
 tooltip {

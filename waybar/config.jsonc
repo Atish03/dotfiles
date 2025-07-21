@@ -11,9 +11,6 @@
 
   "hyprland/workspaces": {
     "format": "{icon}",
-    "format-icons": {
-      "active": ""
-    },
     "persistent-workspaces": {
       "*": 10, 
       "HDMI-A-1": 3 
@@ -35,14 +32,13 @@
       "format": "{capacity}% {icon}",
       "format-charging": "{capacity}% ",
       "format-plugged": "{capacity}% ",
-      "format-alt": "{time} {icon}",
       "format-icons": [" ", " ", " ", " ", " "]
   },
 
   "network": {
       "interval": 1, 
-      "format-wifi": "{essid} 󰖩 "  ,
-      "format-ethernet": "Connected  ",
+      "format-wifi": "{essid} 󰖩"  ,
+      "format-ethernet": "Connected ",
       "tooltip-format": "{ifname} via {gwaddr}",
       "format-linked": "{ifname} (No IP)",
       "format-disconnected": "Disconnected ⚠",
@@ -51,18 +47,18 @@
 
   "pulseaudio": {
     "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}",
-    "format-bluetooth-muted": "{icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} ",
+    "format-bluetooth-muted": "{icon}  {format_source}",
     "format-muted": "{format_source}",
-    "format-source": " ",
-    "format-source-muted": " ",
+    "format-source": "",
+    "format-source-muted": "",
     "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
-      "portable": " ",
-      "car": " ",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
       "default": [" ", " ", " "]
     },
     "on-click": "~/.config/waybar/sink-select.sh"
