@@ -48,7 +48,7 @@ mainbox {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            transparent;
-    children:                    [ "listview" ];
+    children:                    [ "listview", "mode-switcher" ];
 }
 
 /*****----- Listview -----*****/
@@ -98,4 +98,11 @@ element-text {
 element selected.normal {
     background-color:            @selected;
     text-color:                  @foreground;
+}
+
+#mode-switcher {
+    enabled: true;
+    location: south;
+    orientation: horizontal;
+    spacing: 20px;
 }
