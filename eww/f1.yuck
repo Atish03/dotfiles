@@ -1,8 +1,5 @@
-(defpoll location       :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .location")
-(defpoll upcoming       :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .upcoming")
-(defpoll country        :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .country")
+(defpoll F1_METADATA    :interval "900" "cat $HOME/.cache/mywidgets/event.json")
 (defpoll winners        :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .winners")
-(defpoll meeting_start  :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .meeting_start")
 
 (defwidget formula1[]
     (box :class "formula-main"
@@ -18,19 +15,19 @@
               (label :justify "right"
                      :xalign 1
                      :width 250
-                     :text "${location}, ${country}"
+                     :text "${F1_METADATA?.location?:'Fetching location...'}, ${F1_METADATA?.country?:''}"
               )
          )
-         (box :visible {upcoming}
+         (box :visible {F1_METADATA?.upcoming?:true}
               :orientation "v"
               :space-evenly false
               (box :class "car-gif"
                    :height 100
               )
-              (box "Event starts at ${meeting_start} UTC")
+              (box "Event starts at ${F1_METADATA?.meeting_start?:'...'} UTC")
           )
          (box :orientation "v"
-              :visible {!upcoming}
+              :visible {!(F1_METADATA?.upcoming?:false)}
               (for driver in winners
                     (box :class "driver"
                          :space-evenly false

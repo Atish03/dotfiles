@@ -5,7 +5,7 @@
          :class "media"
          :space-evenly false
          :spacing 20
-        (box :style "background-image: url('${METADATA.cover_url}')"
+        (box :style "background-image: url('${METADATA?.cover_url}')"
              :class "cover"
              :height 180
              :width 180
@@ -20,17 +20,17 @@
             (box :class "output-device-box"
                  :space-evenly true
                  (label :class "output-device"
-                        :text "${METADATA.output.icon}  ${METADATA.output.name}"
+                        :text "${METADATA?.output?.icon?:''}  ${METADATA?.output?.name?:'No Device'}"
                         :limit-width 20
                         :halign "end"
                  )
             )
-            (label :text "${METADATA.title}"
+            (label :text "${METADATA?.title?:'No media playing'}"
                    :class "title"
                    :valign "center"
                    :halign "center"
             )
-            (label :text "${METADATA.artist}"
+            (label :text "${METADATA?.artist?:''}"
                    :class "artist"
                    :show-truncated true
                    :limit-width 100
@@ -39,7 +39,7 @@
             )
             (box :class "progressbar"
                  :halign "center"
-                (scale :value "${METADATA.progress}"
+                (scale :value "${METADATA?.progress?:0}"
                        :min 0
                        :max 101
                        :round-digits 1
