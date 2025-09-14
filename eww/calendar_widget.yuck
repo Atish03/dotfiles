@@ -1,4 +1,4 @@
-(defpoll EVENTS :interval "1m" "cat $HOME/.cache/mywidgets/calendar.json")
+(defpoll EVENTS :initial "[]" :interval "1m" "cat $HOME/.cache/mywidgets/calendar.json")
 
 (defwidget calendar_widget[]
   (box :class "cal-widget"

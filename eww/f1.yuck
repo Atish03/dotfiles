@@ -1,5 +1,5 @@
 (defpoll F1_METADATA    :interval "900" "cat $HOME/.cache/mywidgets/event.json")
-(defpoll winners        :interval "900" "cat $HOME/.cache/mywidgets/event.json | jq -r .winners")
+(defpoll winners        :interval "900" :initial "[]" "cat $HOME/.cache/mywidgets/event.json | jq -r .winners")
 
 (defwidget formula1[]
     (box :class "formula-main"
