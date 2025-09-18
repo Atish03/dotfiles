@@ -24,7 +24,7 @@
 )
 
 (defwindow mywidgets
-    :monitor 0
+    :monitor '["HDMI-A-2", "eDP-1"]'
     :geometry (geometry :x "5%"
                         :y "10%"
                         :anchor "top left")

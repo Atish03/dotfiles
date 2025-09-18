@@ -19,9 +19,11 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    background: #1e1e2e;
+    background: #313244;
     color: #cdd6f4;
     border-radius: 7px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
 
 #workspaces button:hover {
